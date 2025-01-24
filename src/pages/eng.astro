@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '../BaseLayout.astro'
+import Naslov from '../components/Naslov.astro'
+import Zahtevi from '../components/Zahtevi.astro'
+import Broj from '../components/Broj.astro'
+import Zahtev from '../components/Zahtev.astro'
 import Konkretizacija from '../components/Konkretizacija.astro'
+import Fusnote from '../components/Fusnote.astro'
 ---
 
 <BaseLayout
@@ -8,16 +13,15 @@ import Konkretizacija from '../components/Konkretizacija.astro'
     title="STUDENT DEMANDS"
     description="Concrete demands of Serbian university students in blockades since November 2024."
     >
-    <h1 class="fade-in font-bold text-4xl md:text-6xl text-center mb-6">Serbian Students' Demands Amid University Sit-ins:</h1>
-    <div class="flex flex-col gap-6 max-w-3xl mx-auto">
-
+    <Naslov>Serbian Students' Demands Amid University Sit-ins</Naslov>
+    <Zahtevi>
         <div class="stagger-container-1 flex flex-col mb-6">
-            <div class="stagger-in text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+            <Broj>
                 I.
-            </div>
-            <p class="stagger-in text-xl md:text-2xl text-center font-bold mb-4">
+            </Broj>
+            <Zahtev>
                 Publication of the complete documentation concerning the reconstruction of the Novi Sad Railway Station, which is currently inaccessible to the public.
-            </p>
+            </Zahtev>
 
             <Konkretizacija>
                 <p>
@@ -31,12 +35,12 @@ import Konkretizacija from '../components/Konkretizacija.astro'
         </div>
 
         <div class="stagger-container-2 flex flex-col mb-6">
-            <div class="stagger-in text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+            <Broj>
                 II.
-            </div>
-            <p class="stagger-in text-xl md:text-2xl text-center font-bold mb-4">
+            </Broj>
+            <Zahtev>
                 We demand confirmation from the relevant authorities of the identity of all persons for whom there is reasonable suspicion that they physically assaulted students and professors, and we also demand the initiation of criminal proceedings against them. Furthermore, we demand the dismissal of these persons if it is shown that they hold public office.
-            </p>
+            </Zahtev>
 
             <Konkretizacija>
                 <p>
@@ -46,7 +50,7 @@ import Konkretizacija from '../components/Konkretizacija.astro'
                 <p>
                     The individuals identified by the Higher Public Prosecutor’s Office in Belgrade are:
                 </p>
-                <ul class="list-decimal ml-12">
+                <ul class="list-decimal ml-12 2xl:ml-20">
                     <li>Milija Koldžić</li>
                     <li>Aleksandar Jokić</li>
                     <li>Dušan Kostić</li>
@@ -59,7 +63,7 @@ import Konkretizacija from '../components/Konkretizacija.astro'
                 <p>
                     According to publicly available information, the same request is being extended to individuals whose identity has not yet been confirmed by the relevant authorities, but who are suspected to be:
                 </p>
-                <ul class="list-decimal ml-12">
+                <ul class="list-decimal ml-12 2xl:ml-20">
                     <li>Tatjana Makević Nikolić</li>
                     <li>Dražen Đurđić, President of the Municipality of Sremski Karlovci</li>
                     <li>Miljan Vračarević</li>
@@ -80,21 +84,21 @@ import Konkretizacija from '../components/Konkretizacija.astro'
                 </p>
 
                 <hr class="w-1/2 border border-zinc-200 dark:border-zinc-800 mt-4" />
-                <div class="flex flex-col font-bold text-xs">
+                <Fusnote>
                     <span><sup class="font-normal">1</sup> Criminal Code of the Republic of Serbia (CC RS), Official Gazette of the Republic of Serbia, Nos. 85/2005, 88/2005 – correction, 107/2005 – correction, 72/2009, 111/2009, 121/2012, 104/2013, 108/2014, 94/2016, 35/2019 and 94/2024, Art. 344, Art. 344a.</span>
                     <span><sup class="font-normal">2</sup> The Law on the Prevention of Corruption, Official Gazette of the Republic of Serbia, Nos. 35/2019, 88/2019, 11/2021 - authentic interpretation, 94/2021, and 12/2022, Article 2, Paragraph 1, Points 2-3.</span>
                     <span><sup class="font-normal">3</sup> The Criminal Code of the Republic of Serbia, Article 112, Paragraph 3.</span>
-                </div>
+                </Fusnote>
             </Konkretizacija>
         </div>
 
         <div class="stagger-container-3 flex flex-col mb-6">
-            <div class="stagger-in text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+            <Broj>
                 III.
-            </div>
-            <p class="stagger-in text-xl md:text-2xl text-center font-bold mb-4">
+            </Broj>
+            <Zahtev>
                 The withdrawal of criminal charges against arrested and detained students during the protests, as well as the suspension of already initiated criminal proceedings.
-            </p>
+            </Zahtev>
 
             <Konkretizacija>
                 <p>
@@ -108,12 +112,12 @@ import Konkretizacija from '../components/Konkretizacija.astro'
         </div>
 
         <div class="stagger-container-4 flex flex-col mb-6">
-            <div class="stagger-in text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+            <Broj>
                 IV.
-            </div>
-            <p class="stagger-in text-lg md:text-2xl text-center font-bold mb-4">
+            </Broj>
+            <Zahtev>
                 An increase of 20% in the funding allocated to state universities.
-            </p>
+            </Zahtev>
 
             <Konkretizacija>
                 <p>
@@ -171,15 +175,15 @@ import Konkretizacija from '../components/Konkretizacija.astro'
                     excluding salaries and other employee income.
                 </p>
                 <hr class="w-1/2 border border-zinc-200 dark:border-zinc-800 mt-4" />
-                <div class="flex flex-col text-xs">
-                    <span><sup>1</sup> BUDGET LAW, ("Official Gazette of the Republic of Serbia," No. 94/2024)</span>
+                <Fusnote>
+                    <span><sup>1</sup> BUDGET LAW, ("Official Gazette of the Republic of Serbia", No. 94/2024)</span>
                     <span><sup>2</sup> OECD (2024), <span class="italic">Education at a Glance 2024: OECD Indicators,</span> OECD Publishing, Paris</span>
                     <span><sup>3</sup> OECD (2018), <span class="italic">OECD Handbook for Internationally Comparative Education Statistics 2018: Concepts, Standards, Definitions, and Classifications,</span> OECD Publishing, Paris (data does not include funds allocated for science and research)</span>
                     <span><sup>4</sup> Additionally, the resolution that would enable the aforementioned increase is not publicly available as of the date of this text (December 30, 2024).</span>
-                </div>
+                </Fusnote>
             </Konkretizacija>
         </div>
-    </div>
+    </Zahtevi>
 </BaseLayout>
 
 <script is:inline type="module" data-astro-rerun>

@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '../BaseLayout.astro'
+import Naslov from '../components/Naslov.astro'
+import Zahtevi from '../components/Zahtevi.astro'
+import Broj from '../components/Broj.astro'
+import Zahtev from '../components/Zahtev.astro'
 import Konkretizacija from '../components/Konkretizacija.astro'
+import Fusnote from '../components/Fusnote.astro'
 ---
 
 <BaseLayout
@@ -8,16 +13,15 @@ import Konkretizacija from '../components/Konkretizacija.astro'
     title="СТУДЕНТСКИ ЗАХТЕВИ"
     description="Конкретизовани захтеви студената Србије који су у блокадама од новембра 2024. године."
     >
-    <h1 class="fade-in font-bold text-4xl md:text-6xl text-center mb-6">Захтеви студената у блокадама:</h1>
-    <div class="flex flex-col gap-6 max-w-3xl mx-auto">
-
-        <div class="stagger-container-1 flex flex-col mb-6">
-            <div class="stagger-in text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+    <Naslov>Захтеви студената у блокадама</Naslov>
+    <Zahtevi>
+        <div class="stagger-container-1 flex flex-col">
+            <Broj>
                 I.
-            </div>
-            <p class="stagger-in text-xl md:text-2xl text-center font-bold mb-4">
+            </Broj>
+            <Zahtev>
                 Објава целокупне документације која се тиче реконструисања железничке станице у Новом Саду која је тренутно недоступна јавности.
-            </p>
+            </Zahtev>
 
             <Konkretizacija>
                 <p>
@@ -30,13 +34,13 @@ import Konkretizacija from '../components/Konkretizacija.astro'
             </Konkretizacija>
         </div>
 
-        <div class="stagger-container-2 flex flex-col mb-6">
-            <div class="stagger-in text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+        <div class="stagger-container-2 flex flex-col">
+            <Broj>
                 II.
-            </div>
-            <p class="stagger-in text-xl md:text-2xl text-center font-bold mb-4">
+            </Broj>
+            <Zahtev>
                 Захтевамо потврду надлежних органа о идентитету свих лица за која постоји основана сумња да су физички напала студенте и професоре, као и покретање кривичних поступака против њих. Такође захтевамо разрешење поменутих лица уколико се покаже да су иста јавни функционери.
-            </p>
+            </Zahtev>
 
             <Konkretizacija>
                 <p>
@@ -46,7 +50,7 @@ import Konkretizacija from '../components/Konkretizacija.astro'
                 <p>
                     Наведена лица, која је идентификовало Више јавно тужилаштво у Београду, су:
                 </p>
-                <ul class="list-decimal ml-12">
+                <ul class="list-decimal ml-12 2xl:ml-20">
                     <li>Милија Колџић</li>
                     <li>Александар Јокић</li>
                     <li>Душан Костић</li>
@@ -59,7 +63,7 @@ import Konkretizacija from '../components/Konkretizacija.astro'
                 <p>
                     Према информацијама доступним јавности, исти захтев це проширује и на лица чији идентитет још увек није потврђен од стране надлежних органа, а за која се сумња да су:
                 </p>
-                <ul class="list-decimal ml-12">
+                <ul class="list-decimal ml-12 2xl:ml-20">
                     <li>Татјана Макевић Николић</li>
                     <li>Дражен Ђурђић, председник општине Сремски Карловци</li>
                     <li>Миљан Врачаревић</li>
@@ -79,21 +83,21 @@ import Konkretizacija from '../components/Konkretizacija.astro'
                     Поред покретања кривичног поступка против лица која су физички нападала професоре и студенте, и за која ће се то тек потврдити, а ако се испостави да су та лица јавни функционери, у смислу чл. 2, ст. 1, тач. 3-4 Закона о спречавању корупције<sup>2</sup> и чл. 112, ст. 3 Кривичног закониа,<sup>3</sup> упоредо захтевамо да се иста разреше дужности.
                 </p>
                 <hr class="w-1/2 border border-zinc-200 dark:border-zinc-800 mt-4" />
-                <div class="flex flex-col font-bold text-xs">
+                <Fusnote>
                     <span><sup class="font-normal">1</sup> Кривични законик - КЗ РС, Сл. гласник РС, бр. 85/2005, 88/2005 - испр., 107/2005 - испр., 72/2009, 111/2009, 121/2012, 104/2013, 108/2014, 94/2016, 35/2019 и 94/2024, чл. 344, чл. 344а.</span>
                     <span><sup class="font-normal">2</sup> Закон о спречавању корупције, Сл. гласник РС, бр. 35/2019, 88/2019, 11/2021 - аутентично тумачење, 94/2021 и 12/2022, чл. 2, ст. 1, тач. 2-3.</span>
                     <span><sup class="font-normal">3</sup> КЗ РС, чл. 112, ст. 3.</span>
-                </div>
+                </Fusnote>
             </Konkretizacija>
         </div>
 
-        <div class="stagger-container-3 flex flex-col mb-6">
-            <div class="stagger-in text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+        <div class="stagger-container-3 flex flex-col">
+            <Broj>
                 III.
-            </div>
-            <p class="stagger-in text-xl md:text-2xl text-center font-bold mb-4">
+            </Broj>
+            <Zahtev>
                 Одбацивање кривичних пријава против ухапшених и приведених студената на протестима, као и обуставу већ покренутих кривичних поступака.
-            </p>
+            </Zahtev>
 
             <Konkretizacija>
                 <p>
@@ -106,13 +110,13 @@ import Konkretizacija from '../components/Konkretizacija.astro'
             </Konkretizacija>
         </div>
 
-        <div class="stagger-container-4 fade-in flex flex-col mb-6">
-            <div class="stagger-in text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+        <div class="stagger-container-4 flex flex-col">
+            <Broj>
                 IV.
-            </div>
-            <p class="stagger-in text-lg md:text-2xl text-center font-bold mb-4">
+            </Broj>
+            <Zahtev>
                 Повећање издвојених средстава за државне факултете у износу од 20%.
-            </p>
+            </Zahtev>
 
             <Konkretizacija>
                 <p>
@@ -168,15 +172,15 @@ import Konkretizacija from '../components/Konkretizacija.astro'
                     изузимајући зараде и др. приходе запослених.
                 </p>
                 <hr class="w-1/2 border border-zinc-200 dark:border-zinc-800 mt-4" />
-                <div class="flex flex-col text-xs">
+                <Fusnote>
                     <span><sup>1</sup> ЗАКОН О БУЏЕТУ, ("Сл. гласник РС", бр. 94/2024)</span>
                     <span><sup>2</sup> OECD (2024), <span class="italic">Education at a Glance 2024: OECD Indicators,</span> OECD Publishing, Paris</span>
                     <span><sup>3</sup> OECD (2018), <span class="italic">OECD Handbook for Internationally Comparative Education Statistics 2018: Concepts, Standards, Definitions, and Classifications,</span> OECD Publishing, Paris (податак не укључује средства издвојена на науку и истраживања)</span>
                     <span><sup>4</sup> Такође, решење које би довело до поменутог повећања није јавно доступно на дан писања текста (30.12.2024).
-                </div>
+                </Fusnote>
             </Konkretizacija>
         </div>
-    </div>
+    </Zahtevi>
 </BaseLayout>
 
 <script is:inline type="module" data-astro-rerun>
