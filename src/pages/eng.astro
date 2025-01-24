@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../BaseLayout.astro'
+import Konkretizacija from '../components/Konkretizacija.astro'
+---
+
+<BaseLayout
+    lang="en"
+    title="STUDENT DEMANDS"
+    description="Concrete demands of Serbian university students in blockades since November 2024."
+    >
+    <h1 class="fade-in font-bold text-4xl md:text-6xl text-center mb-6">Serbian Students' Demands Amid University Sit-ins:</h1>
+    <div class="flex flex-col gap-6 max-w-3xl mx-auto">
+
+        <div class="stagger-container-1 flex flex-col mb-6">
+            <div class="stagger-in text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+                I.
+            </div>
+            <p class="stagger-in text-xl md:text-2xl text-center font-bold mb-4">
+                Publication of the complete documentation concerning the reconstruction of the Novi Sad Railway Station, which is currently inaccessible to the public.
+            </p>
+
+            <Konkretizacija>
+                <p>
+                    <span class="font-bold mr-1 text-red-700">CONCRETELY: </span>
+                    Students demanded the release of the full documentation related to the reconstruction of the Novi Sad Railway Station. The initial response to this request was that only the Public Prosecutor’s Office possessed the documentation, but shortly afterward it was partially published by other state authorities. Our colleagues from technical faculties, as well as from the Association of Architects of Serbia, noticed that the published documents lack key materials necessary for establishing the criminal liability of those who oversaw the reconstruction of the Railway Station and were involved in it.
+                </p>
+                <p>
+                    Specifically missing are the contracts that show who worked on the Railway Station and how much it cost, why the reconstruction cost increased fivefold, and who is responsible for the fact that the Railway Station was ceremonially opened twice without an occupancy permit.
+                </p>
+            </Konkretizacija>
+        </div>
+
+        <div class="stagger-container-2 flex flex-col mb-6">
+            <div class="stagger-in text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+                II.
+            </div>
+            <p class="stagger-in text-xl md:text-2xl text-center font-bold mb-4">
+                We demand confirmation from the relevant authorities of the identity of all persons for whom there is reasonable suspicion that they physically assaulted students and professors, and we also demand the initiation of criminal proceedings against them. Furthermore, we demand the dismissal of these persons if it is shown that they hold public office.
+            </p>
+
+            <Konkretizacija>
+                <p>
+                    <span class="font-bold mr-1 text-red-700">CONCRETELY: </span>
+                    Due to the inaction of the Ministry of the Interior (MUP) regarding this request, on December 2, 2024, a full professor and the Dean of the Faculty of Dramatic Arts (FDU) filed a criminal complaint on behalf of the faculty with the Third Basic Public Prosecutor’s Office. The complaint refers to individuals for whom there is reasonable suspicion that on November 22, 2024, they physically attacked students and professors of the aforementioned faculty, thereby committing the criminal offense of Violent Behavior at a Public Gathering or Sporting Event.<sup>1</sup>
+                </p>
+                <p>
+                    The individuals identified by the Higher Public Prosecutor’s Office in Belgrade are:
+                </p>
+                <ul class="list-decimal ml-12">
+                    <li>Milija Koldžić</li>
+                    <li>Aleksandar Jokić</li>
+                    <li>Dušan Kostić</li>
+                    <li>Milena Aleksić</li>
+                    <li>Ivan Stanišić</li>
+                </ul>
+                <p class="underline underline-offset-4 decoration-zinc-400 dark:zinc-500">
+                    This request applies both to the individuals listed above and to any future person who may physically attack students and professors and all other persons participating in peaceful civic gatherings.
+                </p>
+                <p>
+                    According to publicly available information, the same request is being extended to individuals whose identity has not yet been confirmed by the relevant authorities, but who are suspected to be:
+                </p>
+                <ul class="list-decimal ml-12">
+                    <li>Tatjana Makević Nikolić</li>
+                    <li>Dražen Đurđić, predsednik opštine Sremski Karlovci</li>
+                    <li>Miljan Vračarević</li>
+                </ul>
+                <hr class="w-1/2 border border-zinc-200 dark:border-zinc-800 mt-4" />
+                <p class="font-bold">
+                    <sup class="font-normal">1</sup>Criminal Code of the Republic of Serbia (CC RS), Official Gazette of the Republic of Serbia, Nos. 85/2005, 88/2005 – correction, 107/2005 – correction, 72/2009, 111/2009, 121/2012, 104/2013, 108/2014, 94/2016, 35/2019 and 94/2024, Art. 344, Art. 344a.
+                </p>
+            </Konkretizacija>
+        </div>
+
+        <div class="stagger-container-3 flex flex-col mb-6">
+            <div class="stagger-in text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+                III.
+            </div>
+            <p class="stagger-in text-xl md:text-2xl text-center font-bold mb-4">
+                The withdrawal of criminal charges against arrested and detained students during the protests, as well as the suspension of already initiated criminal proceedings.
+            </p>
+
+            <Konkretizacija>
+                <p>
+                    <span class="font-bold mr-1 text-red-700">CONCRETELY: </span>
+                    In the previous period, government representatives stated that all participants in the civic protests had been released. However, this is not considered fulfillment of the demand.
+                </p>
+                <p>
+                    The reason is that release from custody does not guarantee that these individuals will not be criminally prosecuted or that a conviction will not be rendered against them. In light of the above, we demand the withdrawal of all criminal charges against students and professors participating in the civic protests, and if criminal proceedings are already in progress, that they be terminated.
+                </p>
+            </Konkretizacija>
+        </div>
+
+        <div class="fade-in flex flex-col mb-6">
+            <div class="text-5xl md:text-5xl font-bold text-center mb-2 text-red-700">
+                IV.
+            </div>
+            <p class="text-lg md:text-2xl text-center font-bold mb-4">
+                An increase of 20% in the funding allocated to state universities.
+            </p>
+        </div>
+    </div>
+</BaseLayout>
+
+<script is:inline type="module" data-astro-rerun>
+    const { animate, inView, stagger } = Motion
+    for (let i = 1; i < 4; i++) {
+        inView(".stagger-container-" + i, ({ target }) => {
+            animate(".stagger-container-" + i + "> .stagger-in",
+                { opacity: [0, 1]},
+                { delay: stagger(0.3), duration: 0.6},
+                { ease: [0.39, 0.24, 0.3, 1] },
+            );
+        })
+    }
+    inView(".fade-in", ({ target }) => {
+        animate(target,
+         	{ opacity: [0, 1]},
+      		{ duration: 0.6},
+            { ease: [0.39, 0.24, 0.3, 1] },
+        );
+    })
+</script>
