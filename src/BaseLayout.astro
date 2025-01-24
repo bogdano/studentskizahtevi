@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets'
+import './styles/zahtevi.css'
+import ThemeToggle from './components/ThemeToggle.astro'
+const { lang, title } = Astro.props
+---
+
+<html lang={lang}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+       	<meta name="theme-color" content="" id="meta-theme-color" />
+        <script src="https://cdn.jsdelivr.net/npm/motion@11.18.2/dist/motion.js"></script>
+	</head>
+	<body class="text-zinc-700 dark:bg-zinc-950 dark:text-zinc-300 font-georgia transition-colors">
+	    <div class="flex flex-row justify-end m-4">
+	        <ThemeToggle />
+	    </div>
+		<div class="flex justify-center mb-6">
+		    <Image src="/sikter_saka.svg" alt="RUKE SU VAM KRVAVE" width="150" height="150" class="h-56 w-56" />
+		</div>
+	    <article class="mx-4 md:px-12 md:max-w-5xl md:mx-auto mb-16">
+			<slot />
+        </article>
+        <div class="flex justify-center md:mx-48">
+		    <img src="/studentskizahtevi.svg" alt="studentskizahtevi.rs" class="" loading="lazy" />
+		</div>
+		<a href="" class="block font-mono hover:underline text-center mx-auto mb-24">stencil font</a>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "GeorgiaHosted";
+  src: url("../fonts/georgia.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GeorgiaHosted";
+  src: url("../fonts/georgia-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-georgia {
+  font-family: "Georgia", "GeorgiaHosted", serif;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: rgba(253, 226, 171, 0.9);
+  color: black;
+}
+::selection {
+  background: rgba(253, 226, 171, 0.9);
+  color: black;
+}
+
+.fade-in,
+.fade-up,
+.fade-left,
+.fade-right,
+.stagger-in {
+  opacity: 0;
+}
