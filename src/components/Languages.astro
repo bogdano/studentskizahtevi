@@ -3,10 +3,10 @@ const currentPath = Astro.url.pathname
 ---
 
 <div class="font-extrabold text-zinc-500 font-sans flex flex-row gap-2 mr-2 mt-1">
-    <a href="/" data-astro-prefetch class={`${ currentPath === "/" && ("text-red-700")}`}>ЋИР</a>
+    <a href="/" data-astro-prefetch class={`hover:text-zinc-700 dark:hover:text-zinc-200 ${ currentPath === "/" && ("text-red-700")}`}>ЋИР</a>
     <span class="font-normal">|</span>
-    <a href="/lat" data-astro-prefetch class={`${ currentPath === "/lat/" && ("text-red-700")}`}>LAT</a>
+    <a href="/lat" data-astro-prefetch class={`hover:text-zinc-700 dark:hover:text-zinc-200 ${ currentPath === "/lat/" && ("text-red-700")}`}>LAT</a>
     <span class="font-normal">|</span>
-    <a href="/eng" data-astro-prefetch class={`${ currentPath === "/eng/" && ("text-red-700")}`}>ENG</a>
+    <a href="/eng" data-astro-prefetch class={`hover:text-zinc-700 dark:hover:text-zinc-200 ${ currentPath === "/eng/" && ("text-red-700")}`}>ENG</a>
     <span class="font-normal">|</span>
 </div>
