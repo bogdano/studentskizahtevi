@@ -121,23 +121,3 @@ import Fusnote from '../components/Fusnote.astro'
         </div>
     </Zahtevi>
 </BaseLayout>
-
-<script is:inline type="module" data-astro-rerun>
-    const { animate, inView, stagger } = Motion
-    for (let i = 1; i < 5; i++) {
-        inView(".stagger-container-" + i, ({ target }) => {
-            animate(".stagger-container-" + i + "> .stagger-in",
-                { opacity: [0, 1]},
-                { delay: stagger(0.3), duration: 0.6},
-                { ease: [0.39, 0.24, 0.3, 1] },
-            );
-        })
-    }
-    inView(".fade-in", ({ target }) => {
-        animate(target,
-         	{ opacity: [0, 1]},
-      		{ duration: 0.6},
-            { ease: [0.39, 0.24, 0.3, 1] },
-        );
-    })
-</script>

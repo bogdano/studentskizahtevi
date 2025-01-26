@@ -28,7 +28,6 @@
   color: black;
 }
 
-.fade-in,
 .stagger-in {
   opacity: 0;
 }

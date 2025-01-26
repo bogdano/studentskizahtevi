@@ -10,7 +10,6 @@ const { lang, title, description } = Astro.props
 <html lang={lang}>
 	<head>
         <ClientRouter fallback="swap" />
-
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
@@ -42,7 +41,7 @@ const { lang, title, description } = Astro.props
         <script is:inline data-astro-rerun defer src="https://cloud.umami.is/script.js" data-website-id="1113ec53-0f9a-4b95-b728-9d82db86ce29"></script>
         <noscript>
             <style>
-                .fade-in, .stagger-in {
+                .stagger-in {
                     opacity: 1;
                 }
             </style>
@@ -62,33 +61,37 @@ const { lang, title, description } = Astro.props
 			<slot />
         </article>
 
-        <div class="fade-in flex justify-center mt-12 mb-32 mx-12 md:mx-auto md:w-1/3">
-            <img src="/sretenje.svg" alt="Sretenje" class="w-fit" loading="lazy" />
-        </div>
-        <div class="fade-in flex justify-center mx-6 md:mx-24">
-		    <img src="/studentskizahtevi.svg" alt="studentskizahtevi.rs" class="" loading="lazy" />
-		</div>
-		<div class="fade-in w-full mx-auto mb-8">
-		    <a href="https://www.fontspace.com/overspray-font-f21537" class="flex flex-row font-bold w-fit text-xs mt-2 md:mt-0 font-mono hover:underline underline-offset-4 text-center mx-auto" target="_blank">
-				[stencil font]
-                <svg class="ml-1 w-3 h-3 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M48.7,2H29.6C28.8,2,28,2.5,28,3.3v3C28,7.1,28.7,8,29.6,8h7.9c0.9,0,1.4,1,0.7,1.6l-17,17 c-0.6,0.6-0.6,1.5,0,2.1l2.1,2.1c0.6,0.6,1.5,0.6,2.1,0l17-17c0.6-0.6,1.6-0.2,1.6,0.7v7.9c0,0.8,0.8,1.7,1.6,1.7h2.9 c0.8,0,1.5-0.9,1.5-1.7v-19C50,2.5,49.5,2,48.7,2z"></path> <path d="M36.3,25.5L32.9,29c-0.6,0.6-0.9,1.3-0.9,2.1v11.4c0,0.8-0.7,1.5-1.5,1.5h-21C8.7,44,8,43.3,8,42.5v-21 C8,20.7,8.7,20,9.5,20H21c0.8,0,1.6-0.3,2.1-0.9l3.4-3.4c0.6-0.6,0.2-1.7-0.7-1.7H6c-2.2,0-4,1.8-4,4v28c0,2.2,1.8,4,4,4h28 c2.2,0,4-1.8,4-4V26.2C38,25.3,36.9,24.9,36.3,25.5z"></path> </g> </g></svg>
-            </a>
-		</div>
-		<div class="fade-in flex flex-col items-center font-bold md:flex-row justify-center font-mono mb-4 text-xs md:text-base">
-		    <a href="https://podrzistudente.org" class="hover:underline underline-offset-4" target="_blank">podrzistudente.org</a>
-            <span class="hidden md:block mx-2 font-normal"> | </span>
-			<a href="https://blokadnedonacije.rs" class="hover:underline underline-offset-4" target="_blank">blokadnedonacije.rs</a>
-		</div>
+        <footer class="stagger-container-5">
+            <div class="stagger-in flex justify-center mt-12 mb-24 mx-12 md:mx-auto md:w-1/3">
+                <img src="/sretenje.svg" alt="Sretenje" class="w-fit" loading="lazy" />
+            </div>
+            <div class="stagger-in flex justify-center mx-6 md:mx-24">
+    		    <img src="/studentskizahtevi.svg" alt="studentskizahtevi.rs" class="" loading="lazy" />
+    		</div>
+    		<div class="stagger-in w-full mx-auto mb-8">
+    		    <a href="https://www.fontspace.com/overspray-font-f21537" class="flex flex-row font-bold w-fit text-xs mt-2 md:mt-0 font-mono hover:underline underline-offset-4 text-center mx-auto" target="_blank">
+    				[stencil font]
+                    <svg class="ml-1 w-3 h-3 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M48.7,2H29.6C28.8,2,28,2.5,28,3.3v3C28,7.1,28.7,8,29.6,8h7.9c0.9,0,1.4,1,0.7,1.6l-17,17 c-0.6,0.6-0.6,1.5,0,2.1l2.1,2.1c0.6,0.6,1.5,0.6,2.1,0l17-17c0.6-0.6,1.6-0.2,1.6,0.7v7.9c0,0.8,0.8,1.7,1.6,1.7h2.9 c0.8,0,1.5-0.9,1.5-1.7v-19C50,2.5,49.5,2,48.7,2z"></path> <path d="M36.3,25.5L32.9,29c-0.6,0.6-0.9,1.3-0.9,2.1v11.4c0,0.8-0.7,1.5-1.5,1.5h-21C8.7,44,8,43.3,8,42.5v-21 C8,20.7,8.7,20,9.5,20H21c0.8,0,1.6-0.3,2.1-0.9l3.4-3.4c0.6-0.6,0.2-1.7-0.7-1.7H6c-2.2,0-4,1.8-4,4v28c0,2.2,1.8,4,4,4h28 c2.2,0,4-1.8,4-4V26.2C38,25.3,36.9,24.9,36.3,25.5z"></path> </g> </g></svg>
+                </a>
+    		</div>
+    		<div class="stagger-in flex flex-col items-center font-bold md:flex-row justify-center font-mono mb-4 text-xs md:text-base">
+    		    <a href="https://podrzistudente.org" class="hover:underline underline-offset-4" target="_blank">podrzistudente.org</a>
+                <span class="hidden md:block mx-2 font-normal"> | </span>
+    			<a href="https://blokadnedonacije.rs" class="hover:underline underline-offset-4" target="_blank">blokadnedonacije.rs</a>
+    		</div>
+        </footer>
 
-		<script is:inline type="module" data-astro-rerun>
+        <script is:inline type="module" data-astro-rerun>
             const { animate, inView, stagger } = Motion
-            inView(".fade-in", ({ target }) => {
-                animate(target,
-                 	{ opacity: [0, 1]},
-              		{ duration: 0.6},
-                    { ease: [0.39, 0.24, 0.3, 1] },
-                );
-            })
+            for (let i = 1; i <= 5; i++) {
+                inView(".stagger-container-" + i, ({ target }) => {
+                    animate(".stagger-container-" + i + "> .stagger-in",
+                        { opacity: [0, 1]},
+                        { delay: stagger(0.3), duration: 0.6},
+                        { ease: [0.39, 0.24, 0.3, 1] },
+                    );
+                })
+            }
         </script>
 	</body>
 </html>
