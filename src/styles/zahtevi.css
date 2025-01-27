@@ -28,6 +28,6 @@
   color: black;
 }
 
-.stagger-in {
+.fade-in, .stagger-in {
   opacity: 0;
 }

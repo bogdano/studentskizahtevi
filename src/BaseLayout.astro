@@ -41,7 +41,7 @@ const { lang, title, description } = Astro.props
         <script is:inline data-astro-rerun defer src="https://cloud.umami.is/script.js" data-website-id="1113ec53-0f9a-4b95-b728-9d82db86ce29"></script>
         <noscript>
             <style>
-                .stagger-in {
+                .fade-in, .stagger-in {
                     opacity: 1;
                 }
             </style>
@@ -92,6 +92,9 @@ const { lang, title, description } = Astro.props
                     );
                 })
             }
+            inView(".fade-in", ({ target }) => {
+                animate(target, { opacity: [0, 1] }, { duration: 0.6 });
+            });
         </script>
 	</body>
 </html>
